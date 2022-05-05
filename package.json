@@ -1,4 +1,5 @@
 {
+   
     "name": "Small Sharp Tool",
     "description": "This app does one little thing, and does it well.",
     "keywords": [
@@ -11,7 +12,8 @@
     "logo": "https://small-sharp-tool.com/logo.svg",
     "success_url": "/welcome",
     "scripts": {
-      "postdeploy": "bundle exec rake bootstrap"
+      "postdeploy": "bundle exec rake bootstrap",
+      "start": "node server.js"
     },
     "env": {
       "SECRET_TOKEN": {
@@ -55,4 +57,5 @@
         }
       }
     }
+    
   }
