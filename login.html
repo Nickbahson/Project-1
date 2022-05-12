@@ -20,15 +20,30 @@
         <li class="navbar-selected"><a href="aboutUs.html">About Us</a></li>
       </ul>
     </nav>
-    <section id="sectionArea">
-      <p>Get your resumes quickly and easily.</p>
-      <!-- <button id="buildResume" onclick="location.href='buildresume.html'" type="button"">Start Build</button> -->
-    </section>
-
-    <div class="aboutUs">
-      <h1 id="collections">About Us</h1>
-      <p>First website design project in CodeX</p>
+    <div class="signIn">
+      <h3>Please log in your account.</h3>
+      <form id="info" action="login.html">
+        <label for="accountId">Account ID:</label><br />
+        <input
+          type="text"
+          class="signInPanel"
+          id="accountId"
+          name="accountId"
+          placeholder="Enter your ID here"
+        /><br /><br />
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          class="signInPanel"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+        /><br /><br />
+        <input type="submit" onclick="signIn()" value="Sign In" id="signinbutton" />
+      </form>
     </div>
+    <div class="buildcanvas" id="resumecanvas"></div>
+
     <footer id="main-footer">
       <p>Copyright &copy; 2022 Randel</p>
     </footer>
