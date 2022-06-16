@@ -1,7 +1,3 @@
-function getUserID() {
-  return [0, 0];
-}
-
 function signIn() {
   const accounts = [
     ["myaccount", "mypassword1"],
@@ -9,7 +5,6 @@ function signIn() {
   ];
   const id = document.getElementById("accountId").value;
   const password = document.getElementById("password").value;
-  currentUser = getUserID();
   let accountSize = accounts.length - 1;
   let logInFail = true;
   while (accountSize >= 0) {
