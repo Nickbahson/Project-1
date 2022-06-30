@@ -3,13 +3,13 @@
   box-sizing: border-box;
 }
 body {
-  display:flex;
+  /* display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(222, 255, 244);
-  width:100vw;
-  height:100vh; 
+  width: 100vw;
+  height: 100vh;
 }
 #main-header {
   display: flex;
@@ -50,26 +50,25 @@ body {
   font-weight: bolder;
   background-color: bisque;
   background-image: url("../Files/section-1.png");
-  background-size:100%;
-  background-size:cover;
-  
+  background-size: 100%;
+  background-size: cover;
 }
 #sectionArea p {
   margin: 0 10%;
   font-size: 80px;
-  color:aquamarine;
+  color: aquamarine;
   -webkit-text-stroke: 2px rgb(69, 193, 228);
 }
-#sectionArea button{
-  width:200px;
-  height:50px;
-  background-color:aquamarine;
-  color:black;
+#sectionArea button {
+  width: 200px;
+  height: 50px;
+  background-color: aquamarine;
+  color: black;
   font-size: 20px;
   font-weight: bolder;
   border-radius: 15px;
 }
-#sectionArea button:hover{
+#sectionArea button:hover {
   background-color: rgb(65, 216, 65);
 }
 #collections {
@@ -92,46 +91,50 @@ body {
   font-weight: bolder;
 }
 
-#templates img{
-    width:300px;
-    height:400px;
-    border: 1px solid black;
-    margin: 20px;
+#templates img {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 20px;
 }
 
 #templates img:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 /* css for about us */
 .aboutUs {
-  padding:20px 10% ;
+  padding: 20px 10%;
   min-height: 500px;
 }
 
 /* login in page  */
-.signIn{
-  box-shadow: 0 0 20px rgba(33,33,33,.2); 
+.signIn {
+  box-shadow: 0 0 20px rgba(33, 33, 33, 0.2);
   padding: 10px 15px;
   background-color: antiquewhite;
-  margin:2% 30%;
+  margin: 2% 30%;
   min-height: 300px;
 }
-.signIn h3{
+.signIn h3 {
   text-align: center;
   padding: 15px;
 }
-.signIn #info{
+.signIn #info {
   margin-left: 10%;
   margin-right: 10%;
 }
-.signIn #info .signInPanel{
-  width:100%;
-  height:30px;
+.signIn #info .signInPanel {
+  width: 100%;
+  height: 30px;
   margin-top: 5px;
-  
 }
-.signInFail{
-  color:red;
+
+.signIn #info #error {
+  padding-top: 15px;
+  color: red;
+}
+.signInFail {
+  color: red;
 }
 /* #begin{
 
@@ -140,14 +143,13 @@ body {
   align-content: space-between;
   margin:0;
 } */
-#main-footer{
-  display:flex;
+#main-footer {
+  display: flex;
   /* align-content: flex-end; */
   background-color: #333;
   min-height: 50px;
- 
 }
-#main-footer p{
+#main-footer p {
   padding-top: 10px;
   text-align: center;
   color: #fff;
@@ -155,31 +157,27 @@ body {
 }
 
 @media (max-width: 1100px) {
- 
-
   #templates {
     grid-template-columns: 1fr 1fr;
   }
-
 }
 
 @media (max-width: 700px) {
   #sectionArea p {
-    margin:0%;
-    padding-top:20%;
+    margin: 0%;
+    padding-top: 20%;
     padding-bottom: 15px;
-    font-size:40px;
+    font-size: 40px;
   }
   #templates {
     grid-template-columns: 1fr;
   }
-  .signIn{
+  .signIn {
     margin-left: 10%;
     margin-right: 10%;
     width: 300px;
   }
-  .signIn #info{
-    
+  .signIn #info {
     margin-left: 15%;
     margin-right: 15%;
   }
