@@ -4,10 +4,25 @@ const accounts = [
 ];
 const loginErrorMsg = "Account ID/Password isn't correct, please enter again.";
 
-function signIn() {
-  const id = document.getElementById("accountId").value;
-  const password = document.getElementById("password").value;
-  let pass = false;
+const id = document.getElementById("accountId").value;
+const password = document.getElementById("password").value;
+const submit = document.getElementById("signIn_button");
+const signInForm = document.getElementById("info");
+let pass = false;
+submit.addEventListener("click", signIn)
+// remove the onCLick in the html, this listerner does it.
+
+function signIn(e) {
+  console.log(id, password)
+  if (password && id) {
+    signInForm.action = "builder.html";
+  }
+  else {
+    e.stopPropagation();
+    document.getElementById("error").innerText = loginErrorMsg;
+  }
+  
+ 
 
   //   let accountSize = accounts.length - 1;
   //   let logInFail = true;
@@ -35,23 +50,23 @@ function signIn() {
   //     console.log("sign in fail display");
   //   }
 
-  const signInForm = document.getElementById("info");
+  // const signInForm = document.getElementById("info");
   // signInForm.addEventListener("submit", (e) => {
   //   return true;
   // });
-  signInForm.addEventListener("submit", (e) => {
-    accounts.forEach((element) => {
-      if (element[0] === id && element[1] === password) {
-        pass = true;
-      }
-    });
-    if (pass) {
-      signInForm.action = "builder.html";
-    } else {
-      e.stopPropagation();
-      document.getElementById("error").innerText = loginErrorMsg;
-    }
-  });
+//   signInForm.addEventListener("submit", (e) => {
+//     accounts.forEach((element) => {
+//       if (element[0] === id && element[1] === password) {
+//         pass = true;
+//       }
+//     });
+//     if (pass) {
+//       signInForm.action = "builder.html";
+//     } else {
+//       e.stopPropagation();
+//       document.getElementById("error").innerText = loginErrorMsg;
+//     }
+//   });
 }
 
 /* for setTimeout and setInterval */
